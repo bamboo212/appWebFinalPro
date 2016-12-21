@@ -14,15 +14,18 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+		
 		/*
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
 		*/
+		
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+		
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             // send all mails to a file by default. You have to set
@@ -50,21 +53,17 @@ $config = [
         */
     ],
 	
-'modules' => [
-    
+	'modules' => [    
     'user' => [
         'class' => 'dektrium\user\Module',
         'enableUnconfirmedLogin' => true,
         'confirmWithin' => 21600,
         'cost' => 12,
         'admins' => ['admin']
-    ],
-   
+    ],   
 ],
-    'params' => $params,
-	
-	
 
+    'params' => $params,
 
 ];
 

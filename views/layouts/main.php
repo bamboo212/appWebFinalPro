@@ -40,8 +40,14 @@ AppAsset::register($this);
             ['label' => '	Main Components', 'url' => ['/site/maincomponents']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
+			['label' => 'login', 'url' => ['/user/security/login']],
+			['label' => 'Register', 'url' => ['/user/registration/register']],
+			['label' => 'Profile Editor', 'url' => ['/user/settings/profile']],
+			['label' => 'Aministration', 'url' => ['/user/admin/index']],
+			
+			
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => '', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
@@ -69,7 +75,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Inspire <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
